@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cute Love Surprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.addEventListener('orientationchange', function () {
+            // Lock the screen in the current orientation
+            screen.orientation.lock('portrait-primary');
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="floating-message" onclick="handleMessageClick(this)">I love you</div>
+
+    <div id="greeting" style="font-size: 24px; margin-bottom: 10px;"></div>
+
+    <div class="tabs-container">
+        <a href="#main" class="tab main-tab" onclick="handleTabClick(this)">Main</a>
+        <a href="Gallery.html" class="tab" onclick="handleTabClick(this)">Gallery</a>
+        <a href="calendar.html" class="tab" onclick="handleTabClick(this)">Calendar</a>
+        <a href="game.html" class="tab settings-button"   
+ onclick="handleTabClick(this)">Game</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

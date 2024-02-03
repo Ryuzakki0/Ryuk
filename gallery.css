@@ -1,0 +1,72 @@
+/* gallery.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffecf2;
+    margin: 20px;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.tab {
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: #ffb6c1;
+    color: #ff6b81;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover,
+.active-tab {
+    background-color: #ff99aa;
+    color: #ff4d58;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Updated to create a 3x3 grid */
+    gap: 20px;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 107, 129, 0.8);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-item:hover .caption {
+    opacity: 1;
+}

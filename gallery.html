@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <script src="gallery.js"></script>
+    <script src="lightbox.js"></script>
+</head>
+
+<body>
+
+    <div class="tabs-container">
+        <a href="index.html" class="tab">Main</a>
+        <a href="gallery.html" class="tab active-tab">Gallery</a>
+        <a href="thoughts.html" class="tab">Thoughts</a>
+        <a href="game.html" class="tab">Game</a>
+        <a href="settings.html" class="tab">Settings</a>
+    </div>
+
+    <div class="gallery-container">
+        <!-- Photos go here -->
+        <div class="photo-item" onclick="handlePhotoClick('https://placekitten.com/300/300')">
+            <img src="https://placekitten.com/300/300" alt="Photo 1">
+        </div>
+        <div class="photo-item" onclick="handlePhotoClick('https://placekitten.com/301/301')">
+            <img src="https://placekitten.com/301/301" alt="Photo 2">
+        </div>
+        <!-- Add more photo items as needed -->
+    </div>
+
+</body>
+
+</html>

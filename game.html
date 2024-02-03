@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cat Feeding Game</title>
+    <link rel="stylesheet" href="game.css">
+    <script>
+        window.addEventListener('orientationchange', function () {
+            // Lock the screen in the current orientation
+            screen.orientation.lock('portrait-primary');
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="tabs-container">
+        <a href="index.html" class="tab">Main</a>
+        <a href="gallery.html" class="tab">Gallery</a>
+        <a href="thoughts.html" class="tab">Thoughts</a>
+        <a href="game.html" class="tab active-tab">Game</a>
+    </div>
+
+    <h1>Feed the Hungry Cat</h1>
+
+    <div id="game-container">
+        <div id="cat">
+            <img src="cat.png" alt="Cat Image">
+            <div id="fed-message"></div>
+        </div>
+
+        <!-- Food items directly in the game-container -->
+        <div class="food-item" style="top: 10%; left: 20%;" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)"></div>
+        <div class="food-item" style="top: 20%; left: 40%;" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)"></div>
+        <!-- Add more food items as needed -->
+    </div>
+
+    <script src="gamescript.js"></script>
+
+</body>
+
+</html>
